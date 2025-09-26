@@ -1,3 +1,4 @@
+from datetime import datetime
 from enum import Enum
 from User import User
 from Product import Product
@@ -8,6 +9,10 @@ class Order:
         self.user = user
         self.product = product
         self.quantity = quantity
+        self.created_time = datetime.now()
+        self.status = OrderStatus.UNPAID
+
+        self.product.stock -= self.quantity
 
 
 class OrderStatus(Enum):
