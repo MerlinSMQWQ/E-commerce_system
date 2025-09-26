@@ -1,6 +1,6 @@
 from enum import Enum
 from User import User
-from Products import Product
+from Product import Product
 
 class Order:
     def __init__(self, order_id: str, user: User, product: Product, quantity: int):
